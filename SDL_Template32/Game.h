@@ -3,6 +3,8 @@
 
 #include "SDL.h"
 #include "Sprite.h"
+#include "Hero.h"
+#include "BulletList.h"
 
 class Game
 {
@@ -14,45 +16,44 @@ public:
 
 	bool init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
 
-	//We do one time preparation stuff here
 	void prepare();
 
-	void render();
-	void update();
 	void handleEvents();
-	void cleanup();
-	void waitForFrame();
+	void update();
+	void render();
+	void waitForNextFrame();
 
-	//function to aaccess the running variable
+	void cleanup();
+
 	bool running() { return m_bRunning; }
+
+
+
+
+
 private:
 
+	Hero hero;
 	Sprite background;
-	Sprite spider1, spider2, spider3;
-	Sprite hero;
-	Sprite projectile;
-	Sprite obstacle;
-	Sprite dragon;
+	BulletList bullets;
 
 	SDL_Window* m_pWindow;
 	SDL_Renderer* m_pRenderer;
-	
+
 	bool m_bRunning;
 
+	int targetFramerate = 60;
+	int frameDelayMs = 1200 / targetFramerate;
 
-	int targetFramerate = 30;
-	int frameDelayMs = 1000 / targetFramerate;
+	Uint32 currentFrameEndTime;
+	Uint32 currentFrameStartTime;
+	Uint32 timeSinceLastFrame;
 
-	Uint32 cFEndTime;
-	Uint32 cFStartTime;
-	Uint32 tSinceLastFrame;
-
-	//for gameplay
 	float deltaTime;
 
-	//Keep gameTime in seconds
 	float gameTime = 0;
 };
 
-#endif /* defined (__Game__) */
+
+#endif 
 

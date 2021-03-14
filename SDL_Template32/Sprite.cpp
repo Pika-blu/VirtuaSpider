@@ -1,11 +1,10 @@
 #include "Sprite.h"
+#include <iostream>
 
-//constructor
 Sprite::Sprite()
 {
 }
 
-//constructor
 Sprite::Sprite(SDL_Renderer* renderer, const char* filename,
 	int w, int h)
 {
@@ -22,7 +21,6 @@ Sprite::Sprite(SDL_Renderer* renderer, const char* filename,
 	dst.h = h;
 }
 
-//constructor
 Sprite::Sprite(SDL_Renderer* renderer, const char* filename,
 	int srcX, int srcY, int srcW, int srcH,
 	int dstX, int dstY, int dstW, int dstH)
@@ -43,8 +41,6 @@ Sprite::Sprite(SDL_Renderer* renderer, const char* filename,
 	dst.h = dstH;
 }
 
-
-//destructor
 Sprite::~Sprite()
 {
 }
@@ -53,18 +49,6 @@ Sprite::~Sprite()
 void Sprite::cleanup()
 {
 	SDL_DestroyTexture(pSpriteTex);
-}
-
-void Sprite::setPosition(int x, int y)
-{
-	dst.x = x;
-	dst.y = y;
-}
-
-void Sprite::setSize(int x, int y)
-{
-	dst.w = x;
-	dst.h = y;
 }
 
 void Sprite::draw(SDL_Renderer* renderer)

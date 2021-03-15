@@ -77,13 +77,13 @@ void Hero::moveBy(int x, int y)
 	else if (dst.x >= 0 || dst.x <= 600) speedX = 5.0f;
 
 
-	if (dst.y < 0 || dst.y > 400)
+	if (dst.y < 190 || dst.y > 400)
 	{
 		speedY = 0.0f;
 
-		if (dst.y < 0) dst.y += y + 1.1f;
+		if (dst.y < 190) dst.y += y + 3.0f;
 
-		else if (dst.y > 400) dst.y += y - 1.1f;
+		else if (dst.y > 400) dst.y += y - 3.0f;
 
 	}
 	else if (dst.y >= 0 || dst.y <= 400) speedY = 4.0f;

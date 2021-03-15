@@ -55,7 +55,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 void Game::prepare()
 {
 	background = Sprite(m_pRenderer, "newBackground.png", 0, 0, 640, 480, 0, 0, 640, 480);
-	hero = Hero(m_pRenderer, "hero2.png",0,0,41,50, 0, 195,65,65);
+	hero = Hero(m_pRenderer, "hero2.png",0,0,40,55, 0, 195,85,85);
 	bullets = BulletList();
 
 	deltaTime = 1.0f / targetFramerate;

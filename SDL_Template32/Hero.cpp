@@ -65,29 +65,35 @@ void Hero::moveBy(int x, int y)
 	dst.x += x * speedX;
 	dst.y += y * speedY;
 
-	if (dst.x < 0 || dst.x > 600)
+	if (dst.x < 0 || dst.x > 575)
 	{
 		speedX = 0.0f;
 
-		if (dst.x < 0) dst.x += x + 1.5f;
-
-		else if (dst.x > 600) dst.x += x - 1.5f;
-
+		if (dst.x < 0) {
+			dst.x += x + 3.0f;
+		}
+		else if (dst.x > 575) {
+			dst.x += x - 3.0f;
+		}
 	}
-	else if (dst.x >= 0 || dst.x <= 600) speedX = 5.0f;
-
+	else if (dst.x >= 0 || dst.x <= 575) {
+		speedX = 5.0f;
+	}
 
 	if (dst.y < 190 || dst.y > 400)
 	{
 		speedY = 0.0f;
 
-		if (dst.y < 190) dst.y += y + 3.0f;
-
-		else if (dst.y > 400) dst.y += y - 3.0f;
-
+		if (dst.y < 190) {
+			dst.y += y + 3.0f;
+		}
+		else if (dst.y > 400) {
+			dst.y += y - 3.0f;
+		}
 	}
-	else if (dst.y >= 0 || dst.y <= 400) speedY = 4.0f;
-
+	else if (dst.y >= 0 || dst.y <= 400) {
+		speedY = 5.0f;
+	}
 }
 
 void Hero::draw(SDL_Renderer* renderer)

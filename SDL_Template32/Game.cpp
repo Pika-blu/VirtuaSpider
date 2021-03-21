@@ -56,6 +56,8 @@ void Game::prepare()
 {
 	background = Sprite(m_pRenderer, "newBackground.png", 0, 0, 640, 480, 0, 0, 640, 480);
 	hero = Hero(m_pRenderer, "hero2.png",0,0,40,55, 0, 195,85,85);
+	spider1 = Sprite(m_pRenderer, "spider.png", 0, 34, 46, 47, 250, 250, 85, 85);
+	spider2 = Sprite(m_pRenderer, "spider.png", 0, 34, 46, 47, 300, 220, 85, 85);
 	bullets = BulletList();
 
 	deltaTime = 1.0f / targetFramerate;
@@ -146,6 +148,10 @@ void Game::render()
 	background.draw(m_pRenderer);
 
 	hero.draw(m_pRenderer);
+
+	spider1.draw(m_pRenderer);
+
+	spider2.draw(m_pRenderer);
 
 	bullets.UpdateBullets(m_pRenderer);
 

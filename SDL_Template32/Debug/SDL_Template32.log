@@ -1,6 +1,19 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (AS1007.vcxproj, Example 10-01.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  bullet.cpp
+C:\Users\zegra\source\repos\Term Project V2\VirtuaSpider\SDL_Template32\bullet.cpp(29,15): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+  bulletList.cpp
   Game.cpp
-C:\Users\zegra\source\repos\Term Project\VirtuaSpider\SDL_Template32\Game.cpp(139,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\zegra\source\repos\Term Project\VirtuaSpider\SDL_Template32\Game.cpp(139,18): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\zegra\source\repos\Term Project\VirtuaSpider\SDL_Template32\Game.cpp(161,25): warning C4018: '<': signed/unsigned mismatch
-  SDL_Template32.vcxproj -> C:\Users\zegra\source\repos\Term Project\VirtuaSpider\Debug\Game Fund.exe
+C:\Users\zegra\source\repos\Term Project V2\VirtuaSpider\SDL_Template32\Game.cpp(141,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\zegra\source\repos\Term Project V2\VirtuaSpider\SDL_Template32\Game.cpp(141,18): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\zegra\source\repos\Term Project V2\VirtuaSpider\SDL_Template32\Game.cpp(167,25): warning C4018: '<': signed/unsigned mismatch
+  Hero.cpp
+C:\Users\zegra\source\repos\Term Project V2\VirtuaSpider\SDL_Template32\Hero.cpp(65,21): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\zegra\source\repos\Term Project V2\VirtuaSpider\SDL_Template32\Hero.cpp(66,21): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\zegra\source\repos\Term Project V2\VirtuaSpider\SDL_Template32\Hero.cpp(73,21): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\zegra\source\repos\Term Project V2\VirtuaSpider\SDL_Template32\Hero.cpp(76,21): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\zegra\source\repos\Term Project V2\VirtuaSpider\SDL_Template32\Hero.cpp(88,21): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\zegra\source\repos\Term Project V2\VirtuaSpider\SDL_Template32\Hero.cpp(91,21): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+  Main.cpp
+  Sprite.cpp
+  Generating Code...
+  SDL_Template32.vcxproj -> C:\Users\zegra\source\repos\Term Project V2\VirtuaSpider\Debug\Game Fund.exe

@@ -35,6 +35,8 @@ private:
 
 	Hero hero;
 	Sprite background;
+	Sprite spider1;
+	Sprite spider2;
 	BulletList bullets;
 
 	SDL_Window* m_pWindow;

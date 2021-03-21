@@ -34,6 +34,5 @@ public:
 
 	float speedX = 5.0f;
 	float speedY = 5.0f;
-	Sprite sprite;
 };
 

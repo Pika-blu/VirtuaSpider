@@ -56,10 +56,8 @@ void Game::prepare()
 {
 	background = Sprite(m_pRenderer, "newBackground.png", 0, 0, 640, 480, 0, 0, 640, 480);
 	hero = Hero(m_pRenderer, "hero2.png",0,0,40,55, 0, 195,85,85);
-	spider1 = Sprite(m_pRenderer, "spider.png", 0, 34, 46, 47, 250, 250, 85, 85);
-	spider2 = Sprite(m_pRenderer, "spider.png", 0, 34, 46, 47, 300, 220, 85, 85);
 	bullets = BulletList();
-
+	/*obstacle = Asteroid(m_pRenderer);*/
 	deltaTime = 1.0f / targetFramerate;
 	currentFrameStartTime = SDL_GetTicks();
 
@@ -80,19 +78,19 @@ void Game::handleEvents()
 			switch (event.key.keysym.sym)
 			{
 			case SDLK_w:
-				hero.velY = -1;
+				hero.velY = -75;
 				break;
 
 			case SDLK_s:
-				hero.velY = 1;
+				hero.velY = 75;
 				break;
 
 			case SDLK_a:
-				hero.velX = -1;
+				hero.velX = -75;
 				break;
 
 			case SDLK_d:
-				hero.velX = 1;
+				hero.velX = 75;
 				break;
 
 			case SDLK_SPACE:
@@ -138,7 +136,7 @@ void Game::handleEvents()
 
 void Game::update()
 {
-	hero.moveBy(hero.velX, hero.velY);
+	hero.moveBy(hero.velX * deltaTime, hero.velY * deltaTime);
 }
 
 void Game::render()
@@ -149,11 +147,7 @@ void Game::render()
 
 	hero.draw(m_pRenderer);
 
-	spider1.draw(m_pRenderer);
-
-	spider2.draw(m_pRenderer);
-
-	bullets.UpdateBullets(m_pRenderer);
+	bullets.UpdateBullets(m_pRenderer, deltaTime); // include obstacle
 
 	SDL_RenderPresent(m_pRenderer);
 }

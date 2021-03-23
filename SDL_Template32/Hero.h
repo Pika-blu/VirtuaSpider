@@ -32,7 +32,8 @@ public:
 	int getWeaponY() { return dst.y; };
 
 
-	float speedX = 5.0f;
-	float speedY = 5.0f;
+	float speedX = 10.0f;
+	float speedY = 10.0f;
+	Sprite sprite;
 };
 

@@ -35,9 +35,8 @@ private:
 
 	Hero hero;
 	Sprite background;
-	Sprite spider1;
-	Sprite spider2;
 	BulletList bullets;
+	/*Asteroid obstacle;*/
 
 	SDL_Window* m_pWindow;
 	SDL_Renderer* m_pRenderer;
@@ -45,7 +44,7 @@ private:
 	bool m_bRunning;
 
 	int targetFramerate = 60;
-	int frameDelayMs = 1200 / targetFramerate;
+	int frameDelayMs = 1000 / targetFramerate;
 
 	Uint32 currentFrameEndTime;
 	Uint32 currentFrameStartTime;

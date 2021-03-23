@@ -13,6 +13,7 @@ Bullet::Bullet(SDL_Renderer* renderer, int x, int y)
 	src.x = 0;
 	src.y = 0;
 
+	dY = y;
 
 	dst.x = x;
 	dst.y = y+20;
@@ -24,9 +25,10 @@ Bullet::~Bullet()
 {
 }
 
-void Bullet::update()
+void Bullet::update(float deltaTime)
 {
-	dst.x -= velX;
+	dst.x -= velX * deltaTime;
+	dst.y = dY;
 }
 
 void Bullet::draw(SDL_Renderer* renderer)

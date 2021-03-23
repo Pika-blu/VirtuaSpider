@@ -11,5 +11,5 @@ public:
 	~BulletList();
 
 	void AddBullet(SDL_Renderer* renderer, int x, int y);
-	void UpdateBullets(SDL_Renderer* renderer);
+	void UpdateBullets(SDL_Renderer* renderer, float deltaTime);
 };
